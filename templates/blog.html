@@ -9,6 +9,14 @@
 <body>
     <font face="Algerian">
     <h1>WELCOME TO BLOG</h1><br></font>
+
+    {% include "menu.html" %}
+
+    <ul>
+        {% for blog in blogs %}
+         <li>{{ blog.judul }} - {{ blog.tanggal }}</li>
+        {% endfor %} 
+    </ul>
     <A href="/menu"><button>KEMBALI</button></A>
     
 </body>
